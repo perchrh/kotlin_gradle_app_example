@@ -4,9 +4,12 @@ class App {
 
     fun simulate() {
         val player = Player(25.5, "Joe")
-        println("${player.name} plays the slot machine, using their ¤${player.availableCash}\n")
-
+        println("${player.name} plays the slot machine, using their ¤${player.availableCash}")
         val machine = SlotMachine(170.0)
+
+        println("The machine starts with ¤${machine.cashInside()} inside")
+        println()
+
         player.playUntilBrokeOrDouble(machine)
         player.leave(machine)
 
